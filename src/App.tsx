@@ -3,7 +3,7 @@ import ActionButton from './ui/buttons';
 const App = () => {
 
   const handleClick = () => {
-    console.log(123)
+    console.log('Clicked!')
   }
 
   return (
