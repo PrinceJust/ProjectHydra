@@ -1,0 +1,72 @@
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import ActionButton from './index';
+
+export default {
+  title: 'Buttons/Variants',
+  component: ActionButton,
+  argTypes: {
+    variant: {
+      description: 'The Icon that display inside the button. Get the icon name from the list of icon available in `Icon component.',
+    },
+    text: {
+      description: 'Text display below the icon.'
+    },
+    sizes: {
+      description: 'The status of the button whether it is disabled or not.',
+      defaultValue: {
+        summary: 'md'
+      }
+    },
+    disabled: {
+      description: 'The status of the button whether it is disabled or not.',
+      defaultValue: {
+        summary: 'False'
+      }
+    },
+    click: {
+      description: 'The event occur when the user `click` the call action button.'
+    }
+  }
+} as ComponentMeta<typeof ActionButton>
+
+const Template: ComponentStory<typeof ActionButton> = (args) => 
+    <ActionButton {...args} />
+
+export const Default = Template.bind({})
+
+Default.args = {
+  variant : 'default',
+  text : 'Default',
+  sizes : 'md',
+  disabled : false,
+  click: () => console.log('test call')
+} 
+
+export const Info = Template.bind({})
+
+Info.args = {
+  variant : 'info',
+  text : 'Info',
+  sizes : 'md',
+  disabled : false,
+  click: () => console.log('test call')
+}
+
+Info.argTypes = {
+  variant: {
+    description: 'The Icon that display inside the button. Get the icon name from the list of icon available in `Icon component.',
+  },
+  text: {
+    description: 'Text display below the icon.'
+  },
+}
+
+export const Warning = Template.bind({})
+
+Warning.args = {
+  variant : 'warning',
+  text : 'Warning',
+  sizes : 'md',
+  disabled : false,
+  click: () => console.log('test call')
+}
