@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import {ActionButtonsProps} from './index.interfaces'
 
 export const StyledActionButton = styled.button<ActionButtonsProps>`
-  ${({ variant = 'default', sizes = 'md' }) => {
+  ${({ variant = 'default', btnSize = 'md' }) => {
     let css = ''
 
     if (variant === 'info') {
@@ -62,14 +62,14 @@ export const StyledActionButton = styled.button<ActionButtonsProps>`
         }
       `
     }
-    if (sizes === 'sm') {
+    if (btnSize === 'sm') {
       css += `
         font-size: 14px;
         line-height: 19px;
         border-radius: 4px;
         padding: 8px 20px 6px;
       `
-    } else if (sizes === 'lg') {
+    } else if (btnSize === 'lg') {
       css += `
         font-size: 16px;
         line-height: 22px;

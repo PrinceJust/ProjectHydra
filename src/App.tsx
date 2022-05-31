@@ -1,4 +1,4 @@
-import ActionButton from './ui/buttons';
+import ActionButton from './ui/buttons'
 
 const App = () => {
 
@@ -8,10 +8,10 @@ const App = () => {
 
   return (
    <>
-    <ActionButton variant='default' sizes='sm' click={handleClick} text='DEFAULT'/>
-    <ActionButton variant='info' sizes='sm' click={handleClick} text='INFO'/>
-    <ActionButton variant='warning' sizes='sm' click={handleClick} text='WARNING'/>
-    <ActionButton variant='danger' sizes='sm' click={handleClick} text='DANGER'/>
+    <ActionButton variant="default" btnSize="md" click={ handleClick } text="DEFAULT" />
+    <ActionButton variant="info" btnSize="md" click={ handleClick } text="INFO" />
+    <ActionButton variant="warning" btnSize="md" click={ handleClick } text="WARNING" />
+    <ActionButton variant="danger" btnSize="md" click={ handleClick } text="DANGER" />
    </>
   );
 }

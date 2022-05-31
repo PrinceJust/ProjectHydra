@@ -1,9 +1,9 @@
 import React from 'react'
 
 export interface ActionButtonsProps extends React.HTMLProps<HTMLButtonElement> {
-  text? : string,
+  text?: string,
   click?() : void,
   disabled? : boolean,
-  sizes? : 'sm' | 'md' | 'lg',
+  btnSize? : 'sm' | 'md' | 'lg',
   variant? : 'default' | 'info' | 'warning' | 'danger',
 }

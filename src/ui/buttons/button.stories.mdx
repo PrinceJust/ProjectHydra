@@ -1,17 +1,11 @@
-import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
-import ActionButton from './index';
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs'
+import ActionButton from './index'
 
 export const argTypesButton = {
-  variant: {
-    description: 'Variants for the button. Available button colors `default`, `info`, `warning`, `danger` ',
-    defaultValue: {
-      summary: 'default'
-    }
-  },
   text: {
     description: 'Button text display.'
   },
-  sizes: {
+  btnSize: {
     description: 'Size for the buttons. Available sizes `sm`, `md`, `lg`',
     defaultValue: {
       summary: 'md'
@@ -25,16 +19,22 @@ export const argTypesButton = {
   },
   click: {
     description: 'The event occur when the user `click` the action button.'
-  }
+  },
+  variant: {
+    description: 'Variants for the button. Available button colors `default`, `info`, `warning`, `danger` ',
+    defaultValue: {
+      summary: 'default'
+    }
+  },
 }
 
-<Meta title="MDX/ActionButtons/asd" component={ ActionButton }
+<Meta title="MDX/Action Buttons" component={ ActionButton }
   argTypes={ argTypesButton }
 />
 
 export const Template = (args) => <ActionButton { ...args } />
 
-# Buttons
+# Action Buttons
 Custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
 
 # Variants
@@ -42,86 +42,86 @@ Use any of the available button style types to quickly create a styled button. J
 <Canvas>
   <Story name="Varaint Default" args={
     {
+      btnSize : 'md',
+      click: () => {},
       text : 'Default',
-      sizes : 'md',
-      variant : 'default',
       disabled : false,
-      click: () => {}
+      variant : 'default',
     }
   }>
-    { Template.bind({ }) }
+    { Template.bind({}) }
   </Story>
   <Story name="Varaint Info" args={
     {
       text : 'Info',
-      sizes : 'md',
+      btnSize : 'md',
+      click: () => {},
       variant : 'info',
       disabled : false,
-      click: () => {}
     }
   }>
-    { Template.bind({ }) }
+    { Template.bind({}) }
   </Story>
   <Story name="Varaint Warning" args={
     {
+      btnSize : 'md',
+      click: () => {},
       text : 'Warning',
-      sizes : 'md',
-      variant : 'warning',
       disabled : false,
-      click: () => {}
+      variant : 'warning',
     }
   }>
-    { Template.bind({ }) }
+    { Template.bind({}) }
   </Story>
   <Story name="Varaint Danger" args={
     {
+      btnSize : 'md',
+      click: () => {},
       text : 'Danger',
-      sizes : 'md',
-      variant : 'danger',
       disabled : false,
-      click: () => {}
+      variant : 'danger',
     }
   }>
-    { Template.bind({ }) }
+    { Template.bind({}) }
   </Story>
 </Canvas>
 
 # Sizes
-Fancy larger or smaller buttons? Add **sizes="lg"**, **sizes="sm"** for additional sizes.
+Fancy larger or smaller buttons? Add **btnSize="lg"**, **btnSize="sm"** for additional sizes.
 
 <Canvas>
   <Story name="Size Small" args={
     {
-      text : 'Small Button',
-      sizes : 'sm',
+      btnSize : 'sm',
+      click: () => {},
       variant : 'info',
       disabled : false,
-      click: () => {}
+      text : 'Small Button',
     }
   }>
-    { Template.bind({ }) }
+    { Template.bind({}) }
   </Story>
   <Story name="Size Medium" args={
     {
-      text : 'Medium Button',
-      sizes : 'md',
-      variant : 'warning',
+      btnSize : 'md',
+      click: () => {},
       disabled : false,
-      click: () => {}
+      variant : 'warning',
+      text : 'Medium Button',
     }
   }>
-    { Template.bind({ }) }
+    { Template.bind({}) }
   </Story>
   <Story name="Size Large" args={
     {
-      text : 'Large Button',
-      sizes : 'lg',
-      variant : 'danger',
+      btnSize : 'lg',
+      click: () => {},
       disabled : false,
-      click: () => {}
+      variant : 'danger',
+      text : 'Large Button',
     }
   }>
-    { Template.bind({ }) }
+    { Template.bind({}) }
   </Story>
 </Canvas>
 
@@ -131,14 +131,14 @@ Make buttons look inactive by adding the **disabled** prop to.
 <Canvas>
   <Story name="Disabled" args={
     {
-      text : 'Text Button',
-      sizes : 'md',
-      variant : 'default',
+      btnSize : 'md',
+      click: () => {},
       disabled : true,
-      click: () => {}
+      variant : 'default',
+      text : 'Text Button',
     }
   }>
-    { Template.bind({ }) }
+    { Template.bind({}) }
   </Story>
 </Canvas>
 
@@ -148,14 +148,14 @@ Customable button text add **text='Text Button'** prop.
 <Canvas>
   <Story name="Text" args={
     {
-      text : 'Text Button',
-      sizes : 'md',
+      btnSize : 'md',
+      click: () => {},
       variant : 'info',
       disabled : false,
-      click: () => {}
+      text : 'Text Button',
     }
   }>
-    { Template.bind({ }) }
+    { Template.bind({}) }
   </Story>
 </Canvas>
 
@@ -166,14 +166,14 @@ You can modify this button using **controls**.
 <Canvas>
   <Story name="Default" args={
     {
+      btnSize : 'md',
+      click: () => {},
       text : 'Default',
-      sizes : 'md',
-      variant : 'default',
       disabled : false,
-      click: () => {}
+      variant : 'default',
     }
   }>
-    { Template.bind({ }) }
+    { Template.bind({}) }
   </Story>
 </Canvas>
 
